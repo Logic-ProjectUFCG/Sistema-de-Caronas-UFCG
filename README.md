@@ -41,7 +41,7 @@ O modelo lógico garante que as seguintes regras sejam sempre verdadeiras:
 | ------------------------------------------------- | -------------------------------------------------- |
 | *<ins>Anne Grazieli Marques Silva</ins>* | *<ins>[@annegmsilva](https://github.com/annegmsilva)</ins>* |
 | *<ins>Bianka Vitória Silva Lima</ins>* | *<ins>[@bianka-lima](https://github.com/bianka-lima)</ins>* |
-| *<ins>João Lima</ins>* | *<ins>[@limajoaohs](https://github.com/limajoaohs)</ins>* |
+| *<ins>João Henrique Silva Lima</ins>* | *<ins>[@limajoaohs](https://github.com/limajoaohs)</ins>* |
 | *<ins>Joyce Vitória Nascimento Rodrigues</ins>* | *<ins>[@joycevnr](https://github.com/joycevnr)</ins>* |
 | *<ins>Maria Eduarda Capela Cabral Pinheiro da Silva</ins>* | *<ins>[@Eduarda-Cabral](https://github.com/Eduarda-Cabral)</ins>* |
 
