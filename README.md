@@ -11,10 +11,10 @@ Para promover o transporte sustentável e otimizar a mobilidade na UFCG, este pr
 
 O modelo lógico garante que as seguintes regras sejam sempre verdadeiras:
 
-* ** Validação de Usuários:** Apenas alunos com frequência em aula certificada são considerados `Habilitados` para participar do sistema.
-* ** Logística dos Trajetos:** Toda carona deve ter como origem ou destino, obrigatoriamente, o campus da UFCG. Viagens entre bairros não são permitidas.
-* ** Capacidade da Carona:** Cada carona possui 1 motorista e uma capacidade de 1 a 4 passageiros.
-* ** Agendamento:** Um usuário não pode participar de múltiplas caronas (seja como motorista ou passageiro) que ocorram no mesmo intervalo de tempo.
+* **Validação de Usuários:** Apenas alunos com frequência em aula certificada são considerados `Habilitados` para participar do sistema.
+* **Logística dos Trajetos:** Toda carona deve ter como origem ou destino, obrigatoriamente, o campus da UFCG. Viagens entre bairros não são permitidas.
+* **Capacidade da Carona:** Cada carona possui 1 motorista e uma capacidade de 1 a 4 passageiros.
+* **Agendamento:** Um usuário não pode participar de múltiplas caronas (seja como motorista ou passageiro) que ocorram no mesmo intervalo de tempo.
 
 <br>
 
