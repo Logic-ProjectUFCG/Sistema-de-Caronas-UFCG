@@ -73,5 +73,39 @@ fact {
 	all u1, u2: Usuario | !(u1 = u2)  implies !(u1.aluno = u2.aluno)
 }
 
-run {
-}for 4
+// ----------------------------------------------------------------
+// SEÇÃO DE VERIFICAÇÕES (ASSERTS)
+// ----------------------------------------------------------------
+
+// Assert 1: Verifica se o aluno associado ao motorista não está também na lista de alunos dos passageiros.
+// Espera-se que seja válido (sem contraexemplos).
+assert AlunoMotoristaNaoEhPassageiro {
+    all c: Carona | c.motorista.aluno !in c.passageiros.aluno
+}
+check AlunoMotoristaNaoEhPassageiro for 4
+
+// Assert 2: Verifica se toda carona que sai da UFCG tem pelo menos 2 passageiros.
+// Espera-se que seja inválido (Alloy deve encontrar um contraexemplo).
+assert CaronaSaindoDaUFCGTemMinimoDoisPassageiros {
+    all c: Carona | c.origem = ufcg implies #(c.passageiros) >= 2
+}
+check CaronaSaindoDaUFCGTemMinimoDoisPassageiros for 4
+
+// ----------------------------------------------------------------
+// SEÇÃO DE CENÁRIO EXEMPLO (RUN)
+// ----------------------------------------------------------------
+
+// Predicado que descreve um cenário específico: uma carona lotada saindo de um bairro para a UFCG.
+pred CenarioCaronaCheiaIndoParaUFCG {
+    one c: Carona {
+        // A carona está com a capacidade máxima de passageiros
+        #(c.passageiros) = 4
+        // O destino é a UFCG
+        c.destino = ufcg
+        // A origem não é a UFCG (logo, é um bairro)
+        c.origem != ufcg
+        // O motorista mora na região de origem da carona
+        c.motorista in c.origem.moradores
+    }
+}
+run CenarioCaronaCheiaIndoParaUFCG for 7
