@@ -67,8 +67,8 @@ fact {
 	all c: Carona | !(c.motorista.aluno = none)
 	//Toda carona precisa ter como passageiros alunos
 	all c: Carona | !(c.passageiros.aluno = none)
-	//Cada aluno deve ser, necessariamente, matriculado na UFCG e frequente nas aulas
-	all u: ufcg, a: Aluno, U: Usuario | (!(a in u.alunos) or !(a in u.aulas.frequentes)) implies !(U.aluno = a) 
+	// Cada Usuário deve estar associado a um Aluno que está na lista de alunos da UFCG e é frequente nas aulas.
+	all U: Usuario | U.aluno in ufcg.alunos and U.aluno in ufcg.aulas.frequentes
 	//Se dois usuários são diferentes, os alunos associados a eles são diferentes também
 	all u1, u2: Usuario | !(u1 = u2)  implies !(u1.aluno = u2.aluno)
 }
